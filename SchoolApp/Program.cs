@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SchoolService;
+using System;
 
 namespace SchoolApp
 {
@@ -6,7 +7,8 @@ namespace SchoolApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var service = new Service();
+           service.Controller("CreateStudent", new string[]{"1", "Bob Smit", "0"});
         }
     }
 }
