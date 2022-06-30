@@ -28,7 +28,12 @@ namespace SchoolService
                     int credithours = Convert.ToInt32(variables[2]);
                     business.AddCourse(courseId, courseName, credithours);
                     break;
+                case "addstudenttocourse":
+                    int studentIdAssigned = Convert.ToInt32(variables[0]);
+                    int courseIdAssigned = Convert.ToInt32(variables[1]);
+                    business.AddStudentToCourse(studentIdAssigned, courseIdAssigned);
+                    break;
             }
-        }
+        }//AddStudentToCourse
     }
 }

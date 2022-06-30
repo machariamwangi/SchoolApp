@@ -44,5 +44,20 @@ namespace SchoolBusiness
 
             data.CreateCourse(course);
         }
+
+        public void AddStudentToCourse(int studentId, int courseId)
+        {
+           
+            var data = new Data();
+            var student = data.GetStudent(studentId);
+            var course = data.GetCourse(courseId);
+            var studentCourse = new StudentCourse()
+            {
+                Course = course,
+                Student = student,
+            };
+
+            data.CreateStudentCourse(studentCourse);
+        }
     }
 }
